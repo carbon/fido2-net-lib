@@ -46,4 +46,3 @@ public sealed class AuthenticationExtensionsClientInputs
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public bool? UserVerificationMethod { get; set; }
 }
-

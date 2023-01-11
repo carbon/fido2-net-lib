@@ -15,6 +15,7 @@ public class UafVersion
     /// </summary>
     [JsonPropertyName("major")]
     public ushort Major { get; set; }
+
     /// <summary>
     /// Minor version
     /// </summary>

@@ -1,5 +1,4 @@
-﻿using System;
-using System.Runtime.Serialization;
+﻿using System.Runtime.Serialization;
 
 namespace Fido2NetLib;
 
@@ -9,12 +8,14 @@ namespace Fido2NetLib;
 [Serializable]
 public class UndesiredMetdatataStatusFido2VerificationException : Fido2VerificationException
 {
-    public UndesiredMetdatataStatusFido2VerificationException(StatusReport statusReport) : base($"Authenticator found with undesirable status. Was {statusReport.Status}")
+    public UndesiredMetdatataStatusFido2VerificationException(StatusReport statusReport) 
+        : base($"Authenticator found with undesirable status. Was {statusReport.Status}")
     {
         StatusReport = statusReport;
     }
 
-    protected UndesiredMetdatataStatusFido2VerificationException(SerializationInfo info, StreamingContext context) : base(info, context) { }
+    protected UndesiredMetdatataStatusFido2VerificationException(SerializationInfo info, StreamingContext context) 
+        : base(info, context) { }
 
     /// <summary>
     /// Status report from the authenticator that caused the attestation to be rejected.

@@ -3,6 +3,7 @@
     <TargetFrameworks>net6.0</TargetFrameworks>
     <UserSecretsId>39589262-6aa1-4bde-aaa9-403a7542cf63</UserSecretsId>
     <RootNamespace>Fido2Demo</RootNamespace>
+    <ImplicitUsings>true</ImplicitUsings>
   </PropertyGroup>
   <ItemGroup>
     <ProjectReference Include="..\Src\Fido2.AspNet\Fido2.AspNet.csproj" />

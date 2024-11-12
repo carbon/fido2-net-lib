@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
@@ -175,13 +174,11 @@ public sealed class AuthenticatorAssertionResponse : AuthenticatorResponse
         if (authData.SignCount > 0 && authData.SignCount <= storedSignatureCounter)
             throw new Fido2VerificationException(Fido2ErrorCode.InvalidSignCount, Fido2ErrorMessages.SignCountIsLessThanSignatureCounter);
 
-
-        return new VerifyAssertionResult
+        return new VerifyAssertionResult 
         {
             CredentialId = Raw.Id,
             SignCount = authData.SignCount,
             IsBackedUp = authData.IsBackedUp
-
         };
     }
 }

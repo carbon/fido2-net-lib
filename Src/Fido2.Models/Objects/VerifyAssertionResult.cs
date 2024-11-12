@@ -5,7 +5,7 @@
 /// </summary>
 public class VerifyAssertionResult
 {
-    public byte[] CredentialId { get; init; }
+    public required byte[] CredentialId { get; init; }
 
     /// <summary>
     /// The latest value of the signature counter in the authenticator data from any ceremony using the public key credential source.
